@@ -1,0 +1,266 @@
+/* ==========================================
+   Happy Birthday Ma 💜
+   Animations.css
+========================================== */
+
+/* Fade In */
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+.hero{
+
+    animation:fadeUp 1.2s ease;
+
+}
+
+/* Floating */
+
+@keyframes floating{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-10px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+
+}
+
+.glass-card{
+
+    animation:
+    fadeUp 1.2s ease,
+    floating 5s ease-in-out infinite;
+
+}/* ==========================================
+   Twinkling Stars
+========================================== */
+
+.star{
+    position:absolute;
+    width:2px;
+    height:2px;
+    border-radius:50%;
+    background:#ffffff;
+    animation:twinkle 3s infinite ease-in-out;
+}
+
+@keyframes twinkle{
+
+    0%,100%{
+        opacity:.2;
+        transform:scale(.8);
+    }
+
+    50%{
+        opacity:1;
+        transform:scale(1.6);
+        box-shadow:
+        0 0 10px #4cc9ff,
+        0 0 18px #b026ff;
+    }
+
+}
+
+/* ==========================================
+   Shooting Stars
+========================================== */
+
+.shooting-star{
+
+    position:absolute;
+
+    width:140px;
+    height:2px;
+
+    background:
+    linear-gradient(
+    90deg,
+    white,
+    #4cc9ff,
+    transparent);
+
+    border-radius:999px;
+
+    animation:shoot 4s linear infinite;
+
+    opacity:0;
+
+}
+
+@keyframes shoot{
+
+    0%{
+        transform:
+        translate(-200px,-100px)
+        rotate(25deg);
+        opacity:0;
+    }
+
+    10%{
+        opacity:1;
+    }
+
+    70%{
+        opacity:1;
+    }
+
+    100%{
+        transform:
+        translate(1600px,800px)
+        rotate(25deg);
+        opacity:0;
+    }
+
+}
+
+/* ==========================================
+   Sparkle
+========================================== */
+
+.sparkle{
+
+    animation:
+    sparkle 2.5s infinite;
+
+}
+
+@keyframes sparkle{
+
+    0%,100%{
+        filter:brightness(1);
+    }
+
+    50%{
+        filter:brightness(1.8);
+    }
+
+}/* ==========================================
+   Floating Hearts
+========================================== */
+
+.heart{
+
+    position:absolute;
+
+    font-size:18px;
+
+    color:#ff7be5;
+
+    pointer-events:none;
+
+    opacity:.8;
+
+    animation:heartFloat 8s linear infinite;
+
+}
+
+@keyframes heartFloat{
+
+    0%{
+        transform:
+        translateY(100vh)
+        scale(.6);
+        opacity:0;
+    }
+
+    10%{
+        opacity:1;
+    }
+
+    100%{
+        transform:
+        translateY(-120vh)
+        scale(1.3);
+        opacity:0;
+    }
+
+}
+
+/* ==========================================
+   Aurora Glow
+========================================== */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:-20%;
+
+    background:
+    radial-gradient(circle,#7a2cff33,transparent 45%),
+    radial-gradient(circle,#4cc9ff22,transparent 50%);
+
+    filter:blur(80px);
+
+    animation:auroraMove 18s ease-in-out infinite;
+
+    z-index:-2;
+
+}
+
+@keyframes auroraMove{
+
+    0%{
+        transform:translate(-8%,-5%) scale(1);
+    }
+
+    50%{
+        transform:translate(8%,5%) scale(1.2);
+    }
+
+    100%{
+        transform:translate(-8%,-5%) scale(1);
+    }
+
+}
+
+/* ==========================================
+   Neon Pulse
+========================================== */
+
+.neon{
+
+    animation:neonPulse 2.5s ease-in-out infinite;
+
+}
+
+@keyframes neonPulse{
+
+    0%,100%{
+
+        text-shadow:
+        0 0 10px #b026ff,
+        0 0 20px #4cc9ff;
+
+    }
+
+    50%{
+
+        text-shadow:
+        0 0 18px #ff6bff,
+        0 0 40px #4cc9ff,
+        0 0 70px #b026ff;
+
+    }
+
+}

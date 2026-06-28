@@ -40,4 +40,29 @@ if (giftButton) {
   giftButton.addEventListener("click", () => {
     window.location.href = CONFIG.pages.memories;
   });
+}// Music Button
+const musicBtn = document.getElementById("musicBtn");
+
+if (musicBtn) {
+
+    const audio = new Audio(CONFIG.music.file);
+    audio.loop = true;
+    audio.volume = CONFIG.music.volume;
+
+    let playing = false;
+
+    musicBtn.addEventListener("click", () => {
+
+        if (!playing) {
+            audio.play();
+            musicBtn.textContent = "⏸";
+            playing = true;
+        } else {
+            audio.pause();
+            musicBtn.textContent = "🎵";
+            playing = false;
+        }
+
+    });
+
 }

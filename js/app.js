@@ -1,1 +1,43 @@
-console.log("Happy Birthday Ma 💜");
+// Happy Birthday Ma 💜
+
+// Create Stars
+const starsContainer = document.getElementById("stars");
+
+if (starsContainer) {
+  for (let i = 0; i < 300; i++) {
+    const star = document.createElement("div");
+    star.className = "star";
+
+    star.style.left = Math.random() * 100 + "%";
+    star.style.top = Math.random() * 100 + "%";
+
+    star.style.animationDelay = (Math.random() * 3) + "s";
+
+    starsContainer.appendChild(star);
+  }
+}
+
+// Create Shooting Stars
+const shootingContainer = document.getElementById("shooting-stars");
+
+if (shootingContainer) {
+  for (let i = 0; i < 5; i++) {
+    const s = document.createElement("div");
+    s.className = "shooting-star";
+
+    s.style.top = (Math.random() * 60) + "%";
+    s.style.left = "-200px";
+    s.style.animationDelay = (i * 2) + "s";
+
+    shootingContainer.appendChild(s);
+  }
+}
+
+// Open Gift Button
+const giftButton = document.getElementById("openGift");
+
+if (giftButton) {
+  giftButton.addEventListener("click", () => {
+    window.location.href = CONFIG.pages.memories;
+  });
+}

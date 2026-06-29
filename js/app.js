@@ -165,3 +165,18 @@ if (countdown) {
     setInterval(updateCountdown, 1000);
 
 }
+// ===============================
+// Wishes Page - Next Button
+// ===============================
+
+const finalPage = document.getElementById("finalPage");
+
+if (finalPage) {
+
+    finalPage.addEventListener("click", () => {
+
+        window.location.href = CONFIG.pages.surprise;
+
+    });
+
+}

@@ -494,3 +494,73 @@ body.fade-out{
     }
 
 }
+/* ===============================
+   Birthday Cake
+=============================== */
+
+.birthday-cake{
+    margin:35px auto;
+    text-align:center;
+    cursor:pointer;
+}
+
+.cake-body{
+    width:180px;
+    height:90px;
+    margin:auto;
+    border-radius:18px;
+    background:linear-gradient(#ffb3d9,#ff66b3);
+    box-shadow:
+        0 0 25px #ff66cc,
+        0 0 45px #b84dff;
+}
+
+.cake-top{
+    width:200px;
+    height:30px;
+    margin:auto;
+    border-radius:20px;
+    background:#ffe6f2;
+    position:relative;
+}
+
+.candle{
+    width:12px;
+    height:40px;
+    background:white;
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    top:-38px;
+}
+
+.flame{
+    width:18px;
+    height:18px;
+    background:gold;
+    border-radius:50%;
+    margin:auto;
+    margin-top:-12px;
+    box-shadow:0 0 20px orange;
+    animation:flicker .25s infinite alternate;
+}
+
+.cake-text{
+    margin-top:15px;
+    color:#fff;
+    font-size:18px;
+}
+
+@keyframes flicker{
+
+    from{
+        transform:scale(1);
+        opacity:.8;
+    }
+
+    to{
+        transform:scale(1.25);
+        opacity:1;
+    }
+
+}

@@ -359,3 +359,19 @@ function createConfetti(){
 }
 
 setInterval(createConfetti,180);
+// ===============================
+// Mouse Glow
+// ===============================
+
+const cursorGlow = document.getElementById("cursorGlow");
+
+if (cursorGlow) {
+
+    document.addEventListener("mousemove", (e) => {
+
+        cursorGlow.style.left = e.clientX + "px";
+        cursorGlow.style.top = e.clientY + "px";
+
+    });
+
+}

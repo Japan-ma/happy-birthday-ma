@@ -290,3 +290,29 @@ body::before{
         opacity:0;
     }
 }
+/* ===============================
+   Heart Rain
+=============================== */
+
+.heart-rain{
+    position:fixed;
+    top:-30px;
+    font-size:22px;
+    pointer-events:none;
+    z-index:9998;
+    animation:heartFall linear forwards;
+}
+
+@keyframes heartFall{
+
+    from{
+        transform:translateY(-30px) rotate(0deg);
+        opacity:1;
+    }
+
+    to{
+        transform:translateY(110vh) rotate(360deg);
+        opacity:0;
+    }
+
+}

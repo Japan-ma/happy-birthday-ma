@@ -130,3 +130,38 @@ if (nextWish) {
     });
 
 }
+// ===============================
+// Birthday Countdown
+// ===============================
+
+const countdown = document.getElementById("countdown");
+
+if (countdown) {
+
+    function updateCountdown() {
+
+        const now = new Date();
+
+        let target = new Date(now.getFullYear(), 6, 6); // July = 6
+
+        if (now > target) {
+            target = new Date(now.getFullYear() + 1, 6, 6);
+        }
+
+        const diff = target - now;
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((diff / (1000 * 60)) % 60);
+        const seconds = Math.floor((diff / 1000) % 60);
+
+        countdown.innerHTML =
+            `🎂 ${days} Days ${hours} Hours ${minutes} Minutes ${seconds} Seconds`;
+
+    }
+
+    updateCountdown();
+
+    setInterval(updateCountdown, 1000);
+
+}

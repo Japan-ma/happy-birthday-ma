@@ -389,3 +389,19 @@ body{
     }
 
 }
+/* ===============================
+   Page Transition
+=============================== */
+
+body{
+    opacity:0;
+    transition:opacity .5s ease;
+}
+
+body.loaded{
+    opacity:1;
+}
+
+body.fade-out{
+    opacity:0;
+}

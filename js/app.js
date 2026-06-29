@@ -66,3 +66,11 @@ if (musicBtn) {
     });
 
 }
+// Memories Page - Next Button
+const nextPageBtn = document.getElementById("nextPage");
+
+if (nextPageBtn) {
+    nextPageBtn.addEventListener("click", () => {
+        window.location.href = CONFIG.pages.letter;
+    });
+}

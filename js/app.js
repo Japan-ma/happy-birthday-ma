@@ -180,3 +180,18 @@ if (finalPage) {
     });
 
 }
+// ===============================
+// Replay Story
+// ===============================
+
+const replayStory = document.getElementById("replayStory");
+
+if (replayStory) {
+
+    replayStory.addEventListener("click", () => {
+
+        window.location.href = CONFIG.pages.home;
+
+    });
+
+}

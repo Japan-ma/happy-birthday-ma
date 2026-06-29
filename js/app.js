@@ -325,3 +325,37 @@ function goToPage(url){
     },500);
 
 }
+// ===============================
+// Confetti Effect
+// ===============================
+
+function createConfetti(){
+
+    const colors = [
+        "#ff4d6d",
+        "#ffd60a",
+        "#60a5fa",
+        "#a855f7",
+        "#ffffff"
+    ];
+
+    const confetti = document.createElement("div");
+
+    confetti.className = "confetti";
+
+    confetti.style.left = Math.random()*100 + "vw";
+    confetti.style.background =
+        colors[Math.floor(Math.random()*colors.length)];
+
+    confetti.style.animationDuration =
+        (3 + Math.random()*2) + "s";
+
+    document.body.appendChild(confetti);
+
+    setTimeout(()=>{
+        confetti.remove();
+    },5000);
+
+}
+
+setInterval(createConfetti,180);

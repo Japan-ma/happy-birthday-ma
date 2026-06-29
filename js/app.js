@@ -310,3 +310,18 @@ document.querySelectorAll("a").forEach(link => {
     });
 
 });
+// ===============================
+// Smooth Navigation
+// ===============================
+
+function goToPage(url){
+
+    document.body.classList.add("fade-out");
+
+    setTimeout(() => {
+
+        window.location.href = url;
+
+    },500);
+
+}

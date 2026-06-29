@@ -71,7 +71,7 @@ const nextPageBtn = document.getElementById("nextPage");
 
 if (nextPageBtn) {
     nextPageBtn.addEventListener("click", () => {
-        window.location.href = CONFIG.pages.memorie;
+        window.location.href = CONFIG.pages.memories;
     });
 }
 // ===============================

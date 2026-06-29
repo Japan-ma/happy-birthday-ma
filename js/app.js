@@ -221,3 +221,36 @@ function createHeart() {
 }
 
 setInterval(createHeart, 800);
+
+// ===============================
+// Fireworks Effect
+// ===============================
+
+function createFirework() {
+
+    const firework = document.createElement("div");
+
+    firework.innerHTML = "✨";
+
+    firework.style.position = "fixed";
+    firework.style.left = Math.random() * 100 + "vw";
+    firework.style.top = Math.random() * 100 + "vh";
+    firework.style.fontSize = (20 + Math.random() * 30) + "px";
+    firework.style.pointerEvents = "none";
+    firework.style.zIndex = "9999";
+    firework.style.transition = "all 1s ease";
+
+    document.body.appendChild(firework);
+
+    setTimeout(() => {
+        firework.style.transform = "scale(2)";
+        firework.style.opacity = "0";
+    }, 100);
+
+    setTimeout(() => {
+        firework.remove();
+    }, 1200);
+
+}
+
+setInterval(createFirework, 1500);

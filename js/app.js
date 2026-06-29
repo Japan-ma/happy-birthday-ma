@@ -115,3 +115,18 @@ Happy Birthday! 🎂💜`;
     typeLetter();
 
 }
+// ===============================
+// Letter Page - Next Button
+// ===============================
+
+const nextWish = document.getElementById("nextWish");
+
+if (nextWish) {
+
+    nextWish.addEventListener("click", () => {
+
+        window.location.href = CONFIG.pages.wishes;
+
+    });
+
+}

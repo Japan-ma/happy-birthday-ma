@@ -446,3 +446,51 @@ body.fade-out{
     z-index:999999;
     transform:translate(-50%,-50%);
 }
+/* ===============================
+   Loading Screen
+=============================== */
+
+#loader{
+    position:fixed;
+    inset:0;
+    background:#050510;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    z-index:999999;
+    transition:opacity .8s ease;
+}
+
+.loader-heart{
+    font-size:70px;
+    animation:pulse 1s infinite;
+}
+
+.loader-text{
+    margin-top:20px;
+    color:#fff;
+    font-size:18px;
+    letter-spacing:2px;
+}
+
+.loader-hide{
+    opacity:0;
+    pointer-events:none;
+}
+
+@keyframes pulse{
+
+    0%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.2);
+    }
+
+    100%{
+        transform:scale(1);
+    }
+
+}

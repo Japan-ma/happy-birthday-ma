@@ -421,3 +421,27 @@ if (birthdayCake) {
     });
 
 }
+// ===============================
+// Heart Rain
+// ===============================
+
+function createHeartRain(){
+
+    const heart = document.createElement("div");
+
+    heart.className = "heart-rain";
+    heart.innerHTML = "💜";
+
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = (4 + Math.random() * 3) + "s";
+    heart.style.fontSize = (18 + Math.random() * 16) + "px";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 7000);
+
+}
+
+setInterval(createHeartRain, 500);

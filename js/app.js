@@ -254,3 +254,30 @@ function createFirework() {
 }
 
 setInterval(createFirework, 1500);
+// ===============================
+// Gallery Lightbox
+// ===============================
+
+const lightbox = document.getElementById("lightbox");
+const lightboxImage = document.getElementById("lightboxImage");
+
+document.querySelectorAll(".gallery img").forEach(photo=>{
+
+    photo.addEventListener("click",()=>{
+
+        lightbox.classList.add("active");
+        lightboxImage.src = photo.src;
+
+    });
+
+});
+
+if(lightbox){
+
+    lightbox.addEventListener("click",()=>{
+
+        lightbox.classList.remove("active");
+
+    });
+
+}

@@ -11,7 +11,7 @@ if (starsContainer) {
     star.style.left = Math.random() * 100 + "%";
     star.style.top = Math.random() * 100 + "%";
 
-    star.style.animationDelay = (Math.random() * 3) + "s";
+    star.style.animationDelay = (Math.random() * 6) + "s";
 
     starsContainer.appendChild(star);
   }

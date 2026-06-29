@@ -281,3 +281,32 @@ if(lightbox){
     });
 
 }
+// ===============================
+// Smooth Page Transition
+// ===============================
+
+window.addEventListener("load", () => {
+    document.body.classList.add("loaded");
+});
+
+document.querySelectorAll("a").forEach(link => {
+
+    if (link.target === "_blank") return;
+
+    link.addEventListener("click", function(e) {
+
+        const href = this.getAttribute("href");
+
+        if (!href || href.startsWith("#")) return;
+
+        e.preventDefault();
+
+        document.body.classList.add("fade-out");
+
+        setTimeout(() => {
+            window.location.href = href;
+        }, 500);
+
+    });
+
+});

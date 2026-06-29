@@ -74,3 +74,44 @@ if (nextPageBtn) {
         window.location.href = CONFIG.pages.letter;
     });
 }
+// ===============================
+// Letter Typewriter Effect
+// ===============================
+
+const letterText = document.getElementById("letterText");
+
+if (letterText) {
+
+    const message = `Happy Birthday, My Dearest Ma 💜
+
+Today is all about you.
+
+Thank you for coming into my life and making every day brighter.
+
+I hope your smile never fades, your dreams come true, and your heart is always filled with happiness.
+
+No matter where life takes us, you will always have a special place in my heart.
+
+Happy Birthday! 🎂💜`;
+
+    letterText.textContent = "";
+
+    let index = 0;
+
+    function typeLetter() {
+
+        if (index < message.length) {
+
+            letterText.textContent += message.charAt(index);
+
+            index++;
+
+            setTimeout(typeLetter, 40);
+
+        }
+
+    }
+
+    typeLetter();
+
+}

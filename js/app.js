@@ -190,7 +190,7 @@ if (replayStory) {
 
     replayStory.addEventListener("click", () => {
 
-        window.location.href = CONFIG.pages.home;
+        window.location.href = CONFIG.pages.welcome;
 
     });
 

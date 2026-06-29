@@ -400,3 +400,24 @@ window.addEventListener("load",()=>{
     }
 
 });
+// ===============================
+// Birthday Cake
+// ===============================
+
+const birthdayCake = document.getElementById("birthdayCake");
+
+if (birthdayCake) {
+
+    birthdayCake.addEventListener("click", () => {
+
+        for (let i = 0; i < 60; i++) {
+
+            createConfetti();
+
+        }
+
+        alert("🎉 Happy Birthday Ma! 💜");
+
+    });
+
+}

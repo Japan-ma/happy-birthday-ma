@@ -431,3 +431,18 @@ body.loaded{
 body.fade-out{
     opacity:0;
 }
+/* ===============================
+   Mouse Glow
+=============================== */
+
+#cursorGlow{
+    position:fixed;
+    width:28px;
+    height:28px;
+    border-radius:50%;
+    pointer-events:none;
+    background:radial-gradient(circle,#c86cff,#66ccff);
+    filter:blur(10px);
+    z-index:999999;
+    transform:translate(-50%,-50%);
+}

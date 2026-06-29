@@ -38,7 +38,7 @@ const giftButton = document.getElementById("openGift");
 
 if (giftButton) {
   giftButton.addEventListener("click", () => {
-    window.location.href = CONFIG.pages.memories;
+    window.location.href = CONFIG.pages.letter;
   });
 }// Music Button
 const musicBtn = document.getElementById("musicBtn");
@@ -71,7 +71,7 @@ const nextPageBtn = document.getElementById("nextPage");
 
 if (nextPageBtn) {
     nextPageBtn.addEventListener("click", () => {
-        window.location.href = CONFIG.pages.letter;
+        window.location.href = CONFIG.pages.wishes;
     });
 }
 // ===============================
@@ -125,7 +125,7 @@ if (nextWish) {
 
     nextWish.addEventListener("click", () => {
 
-        window.location.href = CONFIG.pages.wishes;
+        window.location.href = CONFIG.pages.surprise;
 
     });
 

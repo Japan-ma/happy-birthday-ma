@@ -582,6 +582,7 @@ body.fade-out{
 
 #startScreen.hide{
     opacity:0;
+    visibility:hidden;
     pointer-events:none;
 }
 

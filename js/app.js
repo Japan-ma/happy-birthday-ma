@@ -445,3 +445,11 @@ function createHeartRain(){
 }
 
 setInterval(createHeartRain, 500);
+// Memories → Wishes
+const nextWishBtn = document.getElementById("nextWish");
+
+if (nextWishBtn) {
+    nextWishBtn.addEventListener("click", () => {
+        window.location.href = CONFIG.pages.wishes;
+    });
+}

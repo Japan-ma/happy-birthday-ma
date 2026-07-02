@@ -564,3 +564,39 @@ body.fade-out{
     }
 
 }
+/* ===============================
+   Start Screen
+=============================== */
+
+#startScreen{
+    position:fixed;
+    inset:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:#090014;
+    z-index:99999;
+    transition:opacity .8s;
+}
+
+#startScreen.hide{
+    opacity:0;
+    pointer-events:none;
+}
+
+.start-content h1{
+    color:#d8b4fe;
+    font-size:2rem;
+    margin-bottom:20px;
+}
+
+.start-content p{
+    color:white;
+    margin-bottom:20px;
+}
+
+.start-content span{
+    color:#f9a8d4;
+    animation:pulse 3s infinite;
+}
